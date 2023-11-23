@@ -9,50 +9,58 @@ El programa debe imprimir la matriz original y la matriz transpuesta.*/
 
 int main()
 {
+    //Declaramos variables globales
     int columnas;
     int filas;
     
+    //Pedimos los datos al usuario
     printf("Ingrese las filas de la matriz -> ");
     scanf("%d", &filas);
     printf("Ingrese las columnas de la matriz -> ");
     scanf("%d", &columnas);
     
+    //Se deine el tamaño de las matrices
+    int A[filas][columnas];
+    int B [columnas][filas];
 
-    int matrix[filas][columnas];
-    int matrixb[filas][columnas];
-
-    for (int i = 0; i < filas; i++)
-    {
-        for ( int j = 0; j < columnas; j++)
-        {
-            matrix[i][j]=rand()%100;
-        }
-    }
-
+    //Se generan los numeros random
     for (int i = 0; i < filas; i++)
     {
         for (int j = 0; j < columnas; j++)
         {
-            matrixb[j][i]=matrix[i][j];
+            A[i][j]=rand()%100+1;
         }
         
     }
-    printf("Matriz original:\n");
-  for (int i = 0; i < filas; i++) {
-    for (int j = 0; j < columnas; j++) {
-      printf("%d ", matrix[i][j]);
-    }
-    printf("\n");
-  }
 
-  printf("Matriz transpuesta:\n");
-  for (int i = 0; i < columnas; i++) {
-    for (int j = 0; j < filas; j++) {
-      printf("%d ", matrixb[i][j]);
+    //Se crea la transpuesta
+    for (int i = 0; i < filas; i++) 
+    {
+        for (int j = 0; j < columnas; j++) 
+        {
+            B[j][i] = A[i][j];
+        }
+    }
+
+    //Se imprime la matriz original
+    for (int i = 0; i < filas; i++)
+    {
+        for (int j = 0; j < columnas; j++)
+        {
+            printf("%d\t",A[i][j]);
+        }
+        printf("\n");
     }
     printf("\n");
-  }
-    
-    
+
+    //Se imprime la matriz tranpuesta
+    for (int i = 0; i < columnas; i++)
+    {
+        for (int j = 0; j < filas; j++)
+        {
+            printf("%d\t", B[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
