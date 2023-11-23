@@ -4,6 +4,9 @@ el programa llene la matriz con números aleatorios entre 0 y 100.
 Luego, calcule la matriz transpuesta. 
 El programa debe imprimir la matriz original y la matriz transpuesta.*/
 
+//Datos de prueba para tamaño de matriz
+//matriz 2x2, matriz 6x5, matriz 3x3, matriz 3x4, matriz 4x3
+
 #include<stdio.h>
 #include<stdlib.h>
 
