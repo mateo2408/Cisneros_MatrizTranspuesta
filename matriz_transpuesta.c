@@ -17,6 +17,7 @@ int main()
     scanf("%d", &filas);
 
     int matrix[filas][columas];
+    int matrixb[filas][columas];
 
     for (int i = 0; i < filas; i++)
     {
@@ -26,6 +27,14 @@ int main()
         }
     }
 
+    for (int i = 0; i < columas; i++)
+    {
+        for (int j = 0; j < filas; j++)
+        {
+            matrixb[i][j]=matrix[j][i];
+        }
+        
+    }
     
     
     return 0;
